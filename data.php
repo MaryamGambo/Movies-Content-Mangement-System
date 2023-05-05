@@ -1,4 +1,13 @@
 <?php
+
+/*******w******** 
+    
+    Name: Maryam Ayemlo Gambo
+    Date: March 20, 2023
+    Description: This page searches movies using genre and serachInput.
+
+****************/
+
 require('connect.php');
 session_start();
 
