@@ -1,24 +1,32 @@
 <?php
+/*******w******** 
+    
+    Name: Maryam Ayemlo Gambo
+    Date: March 20, 2023
+    Description: This page contains the contact form and validations.
+
+****************/
+
 require('connect.php');
 session_start();
 
-// Show PHP errors (Disable in production)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// // Show PHP errors (Disable in production)
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
-// Include library PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
+// // Include library PHPMailer
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\SMTP;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+// require 'PHPMailer/src/Exception.php';
+// require 'PHPMailer/src/PHPMailer.php';
+// require 'PHPMailer/src/SMTP.php';
 
 
-// Start
-$mail = new PHPMailer(true);
+// // Start
+// $mail = new PHPMailer(true);
 
 //select all categories
 // Build the parameterized SQL query and bind to the above sanitized values.

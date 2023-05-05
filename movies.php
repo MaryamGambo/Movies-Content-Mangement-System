@@ -400,7 +400,7 @@ function truncate($text) {
             <div class="container bg-white border border-danger border-2 my-3 py-2 rounded-2">
          <form id="home" method="post" action="movies.php" class="row g-3">
             <div class="col-auto">
-            <label for="movieListSort" class="form-label mt-2 fw-bold">Sort Movies List by:</label>
+            <label for="moviesListSort" class="form-label mt-2 fw-bold">Sort Movies List by:</label>
         </div>
            <div class="col-auto">
             <select name="movieListSort" id="moviesListSort" class="form-select" aria-label="Default select example">
@@ -440,14 +440,13 @@ function truncate($text) {
           <div class="card-body">
             <h3 class="card-title text-danger"><?= $movie['Name'] ?></h3>
             <p class="card-text"><?= truncate($movie['Description'])?>...</p>
-             <a class= "btn btn-danger mt-3 mb-2"href="movies.php?id=<?= $movie['Id']?>">View Movie</a>
+             <a class= "btn btn-danger mt-3 mb-2" href="movies.php?id=<?= $movie['Id']?>">View Movie</a>
           </div>
         </div>
       </div>
         <?php else:?>
           <div class="col pb-3">
             <div class="card">
-              <img src="" class="card-img-top" alt="">
               <div class="card-body">
                 <h3 class="card-title text-danger"><?= $movie['Name'] ?></h3>
                 <p class="card-text"><?= truncate($movie['Description'])?>...</p>
@@ -488,7 +487,6 @@ function truncate($text) {
         <?php else:?>
           <div class="col pb-3">
             <div class="card">
-              <img src="" class="card-img-top" alt="">
               <div class="card-body">
                 <h3 class="card-title text-danger"><?= $movie['Name'] ?></h3>
                 <p class="card-text"><?= truncate($movie['Description'])?>...</p>

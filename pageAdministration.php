@@ -207,7 +207,7 @@ $genres = $genreStatement->fetchAll();
   <div class="container border border-danger border-2 rounded my-4 px-2 shadow-lg">
   	<div>
   		<h2 class="fw-bold">Manage Users</h2>
-  		<a class = "btn btn-danger mb-2" href="registration.php">Add User</a>
+  		<a class = "btn btn-danger mb-2" href="addUser.php">Add User</a>
   	</div>
   	
 

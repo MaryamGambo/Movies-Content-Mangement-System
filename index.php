@@ -1,4 +1,12 @@
 <?php 
+/*******w******** 
+    
+    Name: Maryam Ayemlo Gambo
+    Date: March 20, 2023
+    Description: This page is the index page and first page seen after opening the website..
+
+****************/
+
 require('connect.php');
 session_start();
 
@@ -113,7 +121,7 @@ function truncate($text) {
                <div class="card h-100 rounded shadow" style="width: 18rem;">
                   <img src="Image_Uploads/<?=$Homeimages[0]['name']?>" class="card-img-top" alt="<?=$movie['Name']?>">
                   <div class="card-body">
-                    <h4 class="card-title"><?= $movie['Name'] ?></h4>
+                    <h4 class="card-title text-danger"><?= $movie['Name'] ?></h4>
                     <p class="card-text"><?= truncate($movie['Description'])?>...</p>
                   </div>
                 </div>
@@ -121,7 +129,7 @@ function truncate($text) {
                 <div class="card h-100" style="width: 18rem;">
                   <img src="" class="card-img-top" alt="">
                   <div class="card-body">
-                    <h4 class="card-title"><?= $movie['Name'] ?></h4>
+                    <h4 class="card-title text-danger"><?= $movie['Name'] ?></h4>
                     <p class="card-text"><?=$movie['Description']?></p>
                   </div>
               </div>

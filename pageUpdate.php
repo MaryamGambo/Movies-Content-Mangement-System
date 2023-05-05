@@ -9,8 +9,8 @@
 ****************/
 
 require('connect.php');
-require '\xampp\htdocs\WD2\challenges\Challenge7_Maryam_Gambo\php-image-resize-master\lib\ImageResize.php';
-require '\xampp\htdocs\WD2\challenges\Challenge7_Maryam_Gambo\php-image-resize-master\lib\ImageResizeException.php';
+require '\xampp\htdocs\WD2\assignments\WEBD-2013_Final_Project_Maryam_Gambo\php-image-resize-master\lib\ImageResize.php';
+require '\xampp\htdocs\WD2\assignments\WEBD-2013_Final_Project_Maryam_Gambo\php-image-resize-master\lib\ImageResizeException.php';
 
 use \Gumlet\ImageResize;
 session_start();
@@ -193,6 +193,7 @@ if($_POST && !empty($_POST['update'])){
                         $imageInvalid = false;
                         $image1 = new ImageResize($temporary_path);
                         $image1->resizeToWidth(400);
+                        $image1->resizeToHeight(600);
                         $image1->save($image_storage_folder);
                         echo("file uploaded successfully");
                     }

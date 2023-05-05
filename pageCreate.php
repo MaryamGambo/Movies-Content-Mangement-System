@@ -10,9 +10,8 @@
 
 require('connect.php');
 session_start();
-require '\xampp\htdocs\WD2\challenges\Challenge7_Maryam_Gambo\php-image-resize-master\lib\ImageResize.php';
-require '\xampp\htdocs\WD2\challenges\Challenge7_Maryam_Gambo\php-image-resize-master\lib\ImageResizeException.php';
-
+require '\xampp\htdocs\WD2\assignments\WEBD-2013_Final_Project_Maryam_Gambo\php-image-resize-master\lib\ImageResize.php';
+require '\xampp\htdocs\WD2\assignments\WEBD-2013_Final_Project_Maryam_Gambo\php-image-resize-master\lib\ImageResizeException.php';
 use \Gumlet\ImageResize;
 
 
@@ -147,7 +146,8 @@ if($_POST ){
                 if (file_is_an_image($temporary_path, $image_storage_folder)) {
                     $imageInvalid = false;
                     $image1 = new ImageResize($temporary_path);
-                    $image1->resizeToWidth(200);
+                    $image1->resizeToWidth(400);
+                    $image1->resizeToHeight(600);
                     $image1->save($image_storage_folder);
                     echo("file uploaded successfully");
                 }
@@ -192,10 +192,10 @@ if($_POST ){
             //  Execute the INSERT.
             $imageStatement->execute();
             echo("image successfully loaded");
-             header("Location:index.php");
+             header("Location:movies.php");
         }
         else{
-             header("Location:index.php");
+             header("Location:movies.php");
         }
 
     }

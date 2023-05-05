@@ -1,5 +1,13 @@
 <?php
 
+/*******w******** 
+    
+    Name: Maryam Ayemlo Gambo
+    Date: March 20, 2023
+    Description: This page searches movies using genre and serachInput.
+
+****************/
+
 require('connect.php');
 session_start();
 
@@ -250,11 +258,11 @@ function truncate($text) {
       document.getElementById('searchKeyword').value = "";
       document.getElementById('genre').selectedIndex = 0;
      }
-  let select = document.getElementById('genre');
+  let selectGenre = document.getElementById('genre');
   let searchKeyword = document.getElementById('searchKeyword');
-   console.log(document.getElementById("results"));
-  select.addEventListener('change', function() {
-    let genre = select.value; // get the selected value
+   
+  selectGenre.addEventListener('change', function() {
+    let genre = selectGenre.value; // get the selected value
     var query = searchKeyword.value; // get the search query
     let xhr = new XMLHttpRequest(); // create the AJAX object
     xhr.onreadystatechange = function() {
@@ -266,6 +274,25 @@ function truncate($text) {
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send('genre=' + genre + '&searchKeyword=' + query); // send the selected category to the server
   });
+  
+  searchKeyword.addEventListener('input', function(){
+    if(searchKeyword.value === ""){
+       let genre = selectGenre.value; // get the selected value
+       let htr = new XMLHttpRequest(); // create the AJAX object
+       htr.onreadystatechange = function() {
+      if(htr.readyState === XMLHttpRequest.DONE && htr.status === 200){
+        document.getElementById('results').innerHTML = htr.responseText; // update the search results
+      }
+    };
+    htr.open('POST', 'data.php', true);
+    htr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    htr.send('genre=' + genre); // send the selected category to the server
+
+    }
+
+  });
+
+
 </script>
 
 </body>
